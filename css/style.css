@@ -821,29 +821,30 @@ body.sticky-footer {
       transform: rotate(180deg); }
   .main-menu a {
     color: #fff;
-    text-transform: uppercase;
-    margin-right: 2px; }
-    .main-menu a:hover {
-      background-color: rgba(0, 0, 0, 0.2); }
+    text-transform: uppercase; }
 
-.nav-container {
-  background-color: #4fa6a0; }
+li {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  background: #4fa6a0; }
+  @media screen and (min-width: 1024px) {
+    li {
+      border-right: 2px solid rgba(255, 255, 255, 0.3); } }
+  li:hover {
+    background: #428a85; }
 
-@media screen and (max-width: 1023px) {
-  .main-nav {
-    position: fixed;
-    transition: all .3s;
-    height: 100vh;
-    z-index: 200;
-    overflow-y: auto;
-    width: 85%;
-    right: -85%; }
-    .main-nav.show-menu {
-      right: 0; } }
-
-@media screen and (max-width: 1023px) {
-  .main-nav {
-    background-color: #4fa6a0; } }
+.main-nav {
+  background: #4fa6a0; }
+  @media screen and (max-width: 1023px) {
+    .main-nav {
+      position: fixed;
+      transition: all .3s;
+      height: 100vh;
+      z-index: 200;
+      overflow-y: auto;
+      width: 85%;
+      right: -85%; }
+      .main-nav.show-menu {
+        right: 0; } }
 
 .nav-toggle {
   position: relative;
@@ -866,12 +867,19 @@ body.sticky-footer {
     .nav-toggle {
       display: none; } }
 
+.nav-container {
+  background: #4fa6a0; }
+
+.expand-submenu {
+  color: #fff; }
+
 .main-banner__copy {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  background-image: url("img/perrito.jpg"); }
 
 .main-banner__title {
   font-size: 1.55em;
@@ -881,9 +889,6 @@ body.sticky-footer {
     .main-banner__title span:first-child {
       font-weight: normal;
       line-height: 1em; }
-
-.main-banner__img {
-  display: block; }
 
 .main-banner__content span {
   display: block;

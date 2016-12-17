@@ -1,14 +1,24 @@
-ul.main-menu#main-menu
-  li: a(href='#' class='main-menu__items') home
-  li: a(href='#' class='main-menu__items') about us
-  li: a(href='#' class='main-menu__items') services
-    ul
-      li: a(href='#' class='main-menu__itemsSecundario') home
-      li: a(href='#' class='main-menu__itemsSecundario') about us
-      li: a(href='#' class='main-menu__itemsSecundario') services
-      li: a(href='#' class='main-menu__itemsSecundario') galery
-      li: a(href='#' class='main-menu__itemsSecundario') blog
-      li: a(href='#' class='main-menu__itemsSecundario') contacts
-  li: a(href='#' class='main-menu__items') galery
-  li: a(href='#' class='main-menu__items') blog
-  li: a(href='#' class='main-menu__items') contacts
+nav.main-nav#main-nav
+  ul.main-menu#main-menu
+    li: a(href='#') about us
+    li: a(href='#') home
+    li 
+      a(href='#') services
+      ul
+        li: a(href='#') home
+        li: a(href='#') about us
+        li: a(href='#') services
+        li 
+          a(href='#') galery
+          ul
+             li: a(href='#') home
+             li: a(href='#') about us
+             li: a(href='#') services
+             li: a(href='#') galery
+             li: a(href='#') blog
+             li: a(href='#') contacts
+        li: a(href='#') blog
+        li: a(href='#') contacts
+    li: a(href='#') galery
+    li: a(href='#') blog
+    li: a(href='#') contacts

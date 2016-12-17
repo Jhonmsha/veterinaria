@@ -3,6 +3,8 @@ $devMode: false;
 $color1: #81cdc6;
 $color2: #4fa6a0;
 $colorText: #555;
+$colorMenu: #fff;
+$bp-menu: l;
 
 @import "EDgrid/ed-grid";
 
@@ -19,7 +21,7 @@ $colorText: #555;
 .logo-right{
   color: $color2;
   display: flex;
-  @include showFrom(l);  
+  @include showFrom($bp-menu);  
   &__search{
     border-radius: 0.5em;
     margin-right: 0.5em;
@@ -33,31 +35,38 @@ $colorText: #555;
 
 //Menu
 .main-menu{
-  @include edMenu(l);
+  @include edMenu($bp-menu);
   a{
-    color:#fff;
-    text-transform: uppercase;
-    margin-right: 2px;    
-    &:hover{
-      background-color: rgba(black, .2);
-    }
+    color: $colorMenu;
+    text-transform: uppercase;        
+    }    
   }
-}
-.nav-container{
-  background-color: $color2;
-  @include from(l);
+  li{
+    border-bottom: 2px solid rgba($colorMenu,.3);
+    background: $color2;
+    @include from($bp-menu){
+      border-right: 2px solid rgba($colorMenu,.3);
+    }
+    &:hover{
+      background: darken($color2,8)
+  }
 }
 .main-nav{
-  @include edNav('right', l);
-  @include to(l){
-    background-color: $color2;
-  }
+  @include edNav(right, $bp-menu);
+  background: $color2;  
 }
-
 .nav-toggle{
   @include navToggle(20px, $color2);
   @include hideFrom(l);
   margin-right: 1em;
+}
+.nav-container{
+  background: $color2;
+
+  
+}
+.expand-submenu{
+  color: $colorMenu;  
 }
 
 
@@ -68,12 +77,12 @@ $colorText: #555;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
+    background-image: url('img/perrito.jpg') 
    //transform: translateX(50%);
   }
   &__title{
     font-size: 1.55em;
-    text-transform: capitalize;
-    
+    text-transform: capitalize; 
     span{
       display: block;
       &:first-child{
@@ -81,9 +90,6 @@ $colorText: #555;
         line-height: 1em;
       }
     }
-  }
-  &__img{
-    display: block;
   }
   &__content{
     span{
@@ -94,5 +100,5 @@ $colorText: #555;
   }
 }
 .banner-container{
-  position: relative;
+  position: relative
 }

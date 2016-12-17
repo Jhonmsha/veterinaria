@@ -828,7 +828,9 @@ li {
   background: #4fa6a0; }
   @media screen and (min-width: 1024px) {
     li {
-      border-right: 2px solid rgba(255, 255, 255, 0.3); } }
+      border-right: 2px solid rgba(255, 255, 255, 0.3);
+      position: absolute;
+      z-index: 10; } }
   li:hover {
     background: #428a85; }
 
@@ -879,21 +881,22 @@ li {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-image: url("img/perrito.jpg"); }
+  width: 50%; }
 
 .main-banner__title {
-  font-size: 1.55em;
+  font-family: 'Signika', sans-serif;
+  font-size: 3.5vw;
   text-transform: capitalize; }
   .main-banner__title span {
     display: block; }
     .main-banner__title span:first-child {
-      font-weight: normal;
-      line-height: 1em; }
+      font-weight: normal; }
 
-.main-banner__content span {
-  display: block;
-  line-height: .8em;
-  font-size: .8em; }
+.main-banner__content {
+  font-family: 'Ubuntu Condensed', sans-serif; }
+  .main-banner__content span {
+    display: block;
+    font-size: 1.5vw; }
 
-.banner-container {
+.main-banner__container {
   position: relative; }

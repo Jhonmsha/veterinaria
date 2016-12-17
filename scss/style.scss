@@ -8,6 +8,7 @@ $bp-menu: l;
 
 @import "EDgrid/ed-grid";
 
+
 //header
 
 //Logo
@@ -46,6 +47,8 @@ $bp-menu: l;
     background: $color2;
     @include from($bp-menu){
       border-right: 2px solid rgba($colorMenu,.3);
+    position: absolute;
+    z-index: 10;
     }
     &:hover{
       background: darken($color2,8)
@@ -77,28 +80,27 @@ $bp-menu: l;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-    background-image: url('img/perrito.jpg') 
-   //transform: translateX(50%);
+    width:50%;  
   }
   &__title{
-    font-size: 1.55em;
+    font-family: 'Signika', sans-serif;
+    font-size: 3.5vw;
     text-transform: capitalize; 
     span{
       display: block;
       &:first-child{
-        font-weight: normal;
-        line-height: 1em;
+        font-weight: normal;       
       }
     }
   }
   &__content{
+    font-family: 'Ubuntu Condensed', sans-serif;
     span{
-      display: block;
-      line-height: .8em;
-      font-size: .8em; 
+      display: block;      
+      font-size: 1.5vw; 
     }
-  }
+  }  
 }
-.banner-container{
+.main-banner__container{
   position: relative
 }

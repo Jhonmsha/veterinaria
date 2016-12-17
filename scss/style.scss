@@ -1,0 +1,68 @@
+$cssCore: false;
+$devMode: false;
+$color1: #81cdc6;
+$color2: #4fa6a0;
+$colorText: #555;
+
+@import "edgrid/ed-grid";
+
+//header
+
+//Logo
+.logo{
+  //display: inline-block;
+  justify-content: space-between;
+}
+.logo-img{
+  height: 6em;
+  width: auto;
+  //display: block;
+
+}
+.logo-right{
+  color: $color2;
+  display: flex;
+  @include showFrom(l);
+  //margin: 1em,auto;
+  &__search{
+    border-radius: 0.5em;
+    margin-right: 0.5em;
+  }
+  &__social{
+    margin-right: 0.5em;
+    display: flex;
+    font-size:1.5em;
+  }
+}
+
+//Menu
+.nav-container{
+  background-color: $color2;
+  @include showFrom(l);
+}
+.main-menu{
+  @include edMenu(l);
+  a{
+    color:#fff;
+    text-transform: uppercase;
+    margin-right: 2px;
+    &.active,
+    &:hover{
+      background-color: rgba(black, .2);
+    }
+  }
+  &__itemsSecundario{
+    border-bottom: 1px solid #fff;
+  }
+  ul{
+    background-color: $color2;
+  }
+}
+.main-nav{
+  @include edNav('left', l);
+}
+.nav-toggle{
+  @include navToggle(20px, $color2);
+  @include hideFrom(l)
+  display: flex;
+}

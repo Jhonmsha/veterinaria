@@ -874,15 +874,21 @@ body.sticky-footer {
   transform: translateY(-50%); }
 
 .main-banner__title {
-  text-transform: capitalize;
-  font-size: 2em; }
+  font-size: 1.55em;
+  text-transform: capitalize; }
   .main-banner__title span {
     display: block; }
     .main-banner__title span:first-child {
-      font-weight: normal; }
+      font-weight: normal;
+      line-height: 1em; }
 
 .main-banner__img {
   display: block; }
+
+.main-banner__content span {
+  display: block;
+  line-height: .8em;
+  font-size: .8em; }
 
 .banner-container {
   position: relative; }

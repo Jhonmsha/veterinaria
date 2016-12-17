@@ -4,26 +4,22 @@ $color1: #81cdc6;
 $color2: #4fa6a0;
 $colorText: #555;
 
-@import "edgrid/ed-grid";
+@import "EDgrid/ed-grid";
 
 //header
 
 //Logo
 .logo{
-  //display: inline-block;
   justify-content: space-between;
 }
 .logo-img{
   height: 6em;
-  width: auto;
-  //display: block;
-
+  width: auto; 
 }
 .logo-right{
   color: $color2;
   display: flex;
-  @include showFrom(l);
-  //margin: 1em,auto;
+  @include showFrom(l);  
   &__search{
     border-radius: 0.5em;
     margin-right: 0.5em;
@@ -36,33 +32,59 @@ $colorText: #555;
 }
 
 //Menu
-.nav-container{
-  background-color: $color2;
-  @include showFrom(l);
-}
 .main-menu{
   @include edMenu(l);
   a{
     color:#fff;
     text-transform: uppercase;
-    margin-right: 2px;
-    &.active,
+    margin-right: 2px;    
     &:hover{
       background-color: rgba(black, .2);
     }
   }
-  &__itemsSecundario{
-    border-bottom: 1px solid #fff;
-  }
-  ul{
+}
+.nav-container{
+  background-color: $color2;
+  @include from(l);
+}
+.main-nav{
+  @include edNav('right', l);
+  @include to(l){
     background-color: $color2;
   }
 }
-.main-nav{
-  @include edNav('left', l);
-}
+
 .nav-toggle{
   @include navToggle(20px, $color2);
-  @include hideFrom(l)
-  display: flex;
+  @include hideFrom(l);
+  margin-right: 1em;
+}
+
+
+
+//Banner
+.main-banner{
+  &__copy{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+   //transform: translateX(50%);
+  }
+  &__title{
+    text-transform: capitalize;
+    font-size: 2em;
+    
+    span{
+      display: block;
+      &:first-child{
+        font-weight: normal;
+      }
+    }
+  }
+  &__img{
+    display: block;
+  }
+}
+.banner-container{
+  position: relative;
 }

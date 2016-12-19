@@ -1,0 +1,30 @@
+.features-container{
+  position: relative;
+  background:url(/img/mascotas.jpg) center/cover;
+  &:before{
+    content: "";
+    position: absolute;
+    background: rgba($color2,.7);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+  }
+
+}
+.feature {
+  position: relative;
+  color: $colorMenu;
+  text-align: center;
+  padding: 15px 10px;
+  &__icon{
+    font-size: 4em;
+    
+  }
+  &__number{
+    font-size: 1.6em;
+    
+  }
+  
+
+}

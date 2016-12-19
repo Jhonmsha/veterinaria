@@ -1,0 +1,3 @@
+.gallery-container{
+    @include grid('.gallery', 2 4, 0em);
+}

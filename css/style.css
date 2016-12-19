@@ -52,7 +52,7 @@ a {
 | $gutter: separación entre cada item de la cuadricula (opcional)
 |
 */
-.button {
+.button, .btn-cta, .about-us__cta {
   display: inline-block;
   line-height: 2.5em;
   padding: 0 1.5em;
@@ -698,6 +698,24 @@ body.sticky-footer {
     -ms-transform: scale(0.97);
     transform: scale(0.97); }
 
+body {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555;
+  font-family: "Ubuntu Condensed", sans-serif; }
+
+.btn-cta {
+  background: white;
+  color: #4fa6a0;
+  border: 1px solid #4fa6a0; }
+  .btn-cta:hover {
+    background: #f2f2f2;
+    text-decoration: none; }
+  .btn-cta:active {
+    -webkit-transform: scale(0.97);
+    -ms-transform: scale(0.97);
+    transform: scale(0.97); }
+
 .logo {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -822,17 +840,16 @@ body.sticky-footer {
   .main-menu a {
     color: #fff;
     text-transform: uppercase; }
-
-li {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  background: #4fa6a0; }
-  @media screen and (min-width: 1024px) {
-    li {
-      border-right: 2px solid rgba(255, 255, 255, 0.3);
-      position: absolute;
-      z-index: 10; } }
-  li:hover {
-    background: #428a85; }
+  .main-menu__item {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    background: #4fa6a0;
+    position: absolute;
+    z-index: 10; }
+    @media screen and (min-width: 1024px) {
+      .main-menu__item {
+        border-right: 2px solid rgba(255, 255, 255, 0.3); } }
+    .main-menu__item:hover {
+      background: #428a85; }
 
 .main-nav {
   background: #4fa6a0; }
@@ -873,7 +890,8 @@ li {
   background: #4fa6a0; }
 
 .expand-submenu {
-  color: #fff; }
+  color: #fff;
+  font-size: .8em; }
 
 .main-banner__copy {
   position: absolute;
@@ -884,7 +902,7 @@ li {
   width: 50%; }
 
 .main-banner__title {
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 3.5vw;
   text-transform: capitalize; }
   .main-banner__title span {
@@ -892,11 +910,164 @@ li {
     .main-banner__title span:first-child {
       font-weight: normal; }
 
-.main-banner__content {
-  font-family: 'Ubuntu Condensed', sans-serif; }
-  .main-banner__content span {
-    display: block;
-    font-size: 1.5vw; }
+.main-banner__content span {
+  display: block;
+  font-size: 1.5vw; }
 
 .main-banner__container {
   position: relative; }
+
+.about-us {
+  padding-top: 1.5em; }
+  .about-us__title {
+    margin: 0;
+    font-family: "Signika", sans-serif; }
+  .about-us__subtitle {
+    color: #81cdc6;
+    margin: 0;
+    font-family: "Signika", sans-serif; }
+  .about-us__cta {
+    background: white;
+    color: #4fa6a0;
+    border: 1px solid #4fa6a0; }
+    .about-us__cta:hover {
+      background: #f2f2f2;
+      text-decoration: none; }
+    .about-us__cta:active {
+      -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+      transform: scale(0.97); }
+
+.features-container {
+  position: relative;
+  background: url(/img/mascotas.jpg) center/cover; }
+  .features-container:before {
+    content: "";
+    position: absolute;
+    background: rgba(79, 166, 160, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 0; }
+
+.feature {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px; }
+  .feature__icon {
+    font-size: 4em; }
+  .feature__number {
+    font-size: 1.6em; }
+
+.services-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -1em;
+  margin-right: -1em; }
+  .services-container img {
+    display: block; }
+  body {
+    overflow-x: hidden; }
+  .services-container > .services {
+    width: calc(100% - 2em);
+    margin: 1em; }
+  @media screen and (min-width: 640px) {
+    .services-container > .services {
+      width: calc(50% - 2em); } }
+  @media screen and (min-width: 1024px) {
+    .services-container > .services {
+      width: calc(33.33333% - 2em); } }
+
+.services-title,
+.services-subtitle {
+  text-align: center;
+  font-family: "Signika", sans-serif; }
+
+.services {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .services__title {
+    padding-left: 1em;
+    margin-bottom: 0;
+    color: #4fa6a0; }
+  .services__content {
+    padding-left: 1em;
+    margin: 0; }
+  .services-icon {
+    font-size: 3em;
+    color: #81cdc6; }
+
+.gallery-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 0em;
+  margin-right: 0em; }
+  .gallery-container img {
+    display: block; }
+  body {
+    overflow-x: hidden; }
+  .gallery-container > .gallery {
+    width: calc(50% - 0em);
+    margin: 0em; }
+  @media screen and (min-width: 640px) {
+    .gallery-container > .gallery {
+      width: calc(25% - 0em); } }
+
+.price-container__title, .price-container__subtitle {
+  font-family: "Signika", sans-serif;
+  text-align: center;
+  margin: 0; }
+
+.price-container__title {
+  font-size: 3em;
+  color: rgba(85, 85, 85, 0.5); }
+  .price-container__title span {
+    color: #555;
+    padding-left: .2em; }
+
+.price-container-item {
+  margin: 0; }
+  .price-container-item__list {
+    border: 2px solid #ccc;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    line-height: 3em; }
+  .price-container-item__title {
+    margin-top: 0;
+    text-align: center;
+    background: #4fa6a0;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 1.5em 0em; }
+    .price-container-item__title span {
+      color: #fff; }
+  .price-container-item__price {
+    font-size: 3em;
+    margin: 0;
+    margin-top: 1em;
+    line-height: .2em; }
+    .price-container-item__price:before {
+      content: "$";
+      font-size: .5em; }
+  .price-container-item__priceDescription {
+    font-size: .6em;
+    margin: 0; }
+
+.price {
+  margin-top: 3em; }
+
+.price-button {
+  text-align: center;
+  background: #4fa6a0;
+  color: #fff; }
+  .price-button:hover {
+    color: #4fa6a0; }

@@ -1,0 +1,25 @@
+.services-container{
+    @include grid('.services', 1 2 3, 2em);
+
+}
+.services-title, 
+.services-subtitle{
+   text-align: center;
+   font-family: $text-titles;
+}
+.services{
+    display: flex;
+    &__title {
+       padding-left: 1em;
+       margin-bottom: 0;
+       color: $color2;
+    }
+    &__content{
+        padding-left: 1em;
+        margin: 0;
+    }
+    &-icon{
+        font-size: 3em;
+        color: $color1;
+    }
+}

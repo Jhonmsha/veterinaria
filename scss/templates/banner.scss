@@ -1,0 +1,28 @@
+.main-banner{
+  &__copy{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:50%;  
+  }
+  &__title{
+    font-family: $text-titles;
+    font-size: 3.5vw;
+    text-transform: capitalize; 
+    span{
+      display: block;
+      &:first-child{
+        font-weight: normal;       
+      }
+    }    
+  }
+  &__content{    
+    span{
+      display: block;      
+      font-size: 1.5vw;         
+    }
+  }  
+}
+.main-banner__container{
+  position: relative
+}

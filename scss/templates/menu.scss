@@ -1,0 +1,40 @@
+//Menu
+
+.main-menu{
+  @include edMenu($bp-menu);
+  a{
+    color: $colorMenu;
+    text-transform: uppercase;        
+    }    
+  
+  &__item{
+    border-bottom: 2px solid rgba($colorMenu,.3);
+    background: $color2;
+    position: absolute;
+    z-index: 10;
+    @include from($bp-menu){
+      border-right: 2px solid rgba($colorMenu,.3);
+    }
+    &:hover{
+      background: darken($color2,8)
+    }
+  }
+}
+.main-nav{
+  @include edNav(right, $bp-menu);
+  background: $color2;  
+}
+.nav-toggle{
+  @include navToggle(20px, $color2);
+  @include hideFrom(l);
+  margin-right: 1em;
+}
+.nav-container{
+  background: $color2;
+
+  
+}
+.expand-submenu{
+  color: $colorMenu;
+  font-size: .8em;  
+}

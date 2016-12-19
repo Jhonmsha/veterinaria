@@ -1,0 +1,4 @@
+.btn-cta{
+    @include button(white,$color2);
+    border: 1px solid $color2;
+}

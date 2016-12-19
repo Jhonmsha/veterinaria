@@ -1,106 +1,37 @@
-$cssCore: false;
-$devMode: false;
-$color1: #81cdc6;
-$color2: #4fa6a0;
-$colorText: #555;
-$colorMenu: #fff;
-$bp-menu: l;
 
+@import "templates/variables";
 @import "EDgrid/ed-grid";
 
-
-//header
+body{
+  font-size: 1em;
+  line-height: 1.5;
+  color: $colorText;
+  font-family: $text-body; 
+}
+//Button
+@import "templates/btn";
 
 //Logo
-.logo{
-  justify-content: space-between;
-}
-.logo-img{
-  height: 6em;
-  width: auto; 
-}
-.logo-right{
-  color: $color2;
-  display: flex;
-  @include showFrom($bp-menu);  
-  &__search{
-    border-radius: 0.5em;
-    margin-right: 0.5em;
-  }
-  &__social{
-    margin-right: 0.5em;
-    display: flex;
-    font-size:1.5em;
-  }
-}
+@import "templates/logo";
 
 //Menu
-.main-menu{
-  @include edMenu($bp-menu);
-  a{
-    color: $colorMenu;
-    text-transform: uppercase;        
-    }    
-  }
-  li{
-    border-bottom: 2px solid rgba($colorMenu,.3);
-    background: $color2;
-    @include from($bp-menu){
-      border-right: 2px solid rgba($colorMenu,.3);
-    position: absolute;
-    z-index: 10;
-    }
-    &:hover{
-      background: darken($color2,8)
-  }
-}
-.main-nav{
-  @include edNav(right, $bp-menu);
-  background: $color2;  
-}
-.nav-toggle{
-  @include navToggle(20px, $color2);
-  @include hideFrom(l);
-  margin-right: 1em;
-}
-.nav-container{
-  background: $color2;
-
-  
-}
-.expand-submenu{
-  color: $colorMenu;  
-}
-
-
+@import "templates/menu";
 
 //Banner
-.main-banner{
-  &__copy{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    width:50%;  
-  }
-  &__title{
-    font-family: 'Signika', sans-serif;
-    font-size: 3.5vw;
-    text-transform: capitalize; 
-    span{
-      display: block;
-      &:first-child{
-        font-weight: normal;       
-      }
-    }
-  }
-  &__content{
-    font-family: 'Ubuntu Condensed', sans-serif;
-    span{
-      display: block;      
-      font-size: 1.5vw; 
-    }
-  }  
-}
-.main-banner__container{
-  position: relative
-}
+@import "templates/banner";
+
+//About US
+
+@import "templates/about";
+
+//Features
+@import "templates/features";
+
+//Services
+@import "templates/services";
+
+//Gallery
+@import "templates/gallery";
+
+//pricing
+@import "templates/price"

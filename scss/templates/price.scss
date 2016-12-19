@@ -1,0 +1,66 @@
+.price-container{   
+     
+    &__title, &__subtitle{
+        font-family: $text-titles;
+        text-align: center;
+        margin: 0;
+       // line-height: 1em;
+    }
+    &__title{
+        font-size: 3em;
+        color: rgba($colorText,.5);
+        span{
+            color: $colorText;
+            padding-left: .2em;
+        }
+    }     
+}
+.price-container-item{
+    margin: 0;
+    &__list{
+        border: 2px solid #ccc;
+        list-style: none;
+        text-align: center;
+        //margin: 0;
+        padding-left: 0;
+        line-height: 3em;
+    }
+    &__title{        
+        margin-top: 0;        
+        text-align: center;
+        background: $color2;
+        color: rgba($colorMenu,.5);
+        padding: 1.5em 0em;
+        span{
+            color: $colorMenu;
+        }        
+    }
+    &__price{
+        font-size: 3em;
+        margin: 0;
+        margin-top: 1em;
+        line-height: .2em;
+        
+        &:before{
+            content: "$";
+            font-size: .5em;
+        }
+        
+    }
+    &__priceDescription{
+        font-size: .6em;
+        margin: 0;
+    }
+    
+}
+.price{
+   margin-top: 3em;
+}
+.price-button{
+    text-align: center;
+    background: $color2;
+    color: $colorMenu;
+    &:hover{
+        color: $color2;
+    }
+}

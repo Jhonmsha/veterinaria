@@ -60,11 +60,12 @@ block services
 
 block images
   .gallery-container
+
     -var g=8
     -while(g--)
       .gallery
         .gallery-item
-          img(src='img/pet.jpg').gallery-img
+          img(src='img/pet'+ g +'.jpg').gallery-img
 
 block pricing
   .price-container
@@ -72,7 +73,7 @@ block pricing
       span Table
     p.price-container__subtitle List of pricing in our locations
     .ed-container.price
-      .ed-item.l-1-3
+      .ed-item.m-1-3
         ul.price-container-item__list
           li: h3.price-container-item__title Preventive 
             span Inspection
@@ -84,7 +85,7 @@ block pricing
           li.price-container-item__detail item 5
           li
             a(href='#').btn-cta.price-button Contact us
-      .ed-item.l-1-3
+      .ed-item.m-1-3
         ul.price-container-item__list
           li: h3.price-container-item__title Preventive 
             span Inspection
@@ -96,7 +97,7 @@ block pricing
           li.price-container-item__detail item 5
           li
             a(href='#').btn-cta.price-button Contact us
-      .ed-item.l-1-3
+      .ed-item.m-1-3
         ul.price-container-item__list
           li: h3.price-container-item__title Preventive 
             span Inspection
@@ -108,5 +109,46 @@ block pricing
           li.price-container-item__detail item 5
           li
             a(href='#').btn-cta.price-button Contact us
-        
+
+block testimonials
+  .testimonials
+    .ed-container
+      .ed-item
+        .testimonials-container
+          h2.testimonials-container__title What
+            span Clients Say
+          h3.testimonials-container__subtitle because they can't tell you whats wrong
+          img(src='img/client.jpg').testimonials-container__img
+          p.testimonials-container__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quasi harum commodi accusamus, assumenda iusto explicabo accusantium voluptatum eos aliquam alias, sunt quia quidem incidunt unde odio aut dolore atque!
+          h3.testimonials-container__name James Bond
+          h4.testimonials-container__location England
+
+block posts
+  
+    .ed-container.post-container
+      .ed-item
+        h2.post-container__title Recent
+          span Post
+        p.post-container__subtitle love is the best medicne
+      .ed-item.l-1-3
+        .post-container__block
+          img(src='img/post.jpg').post-container__img
+          p.post-container__institution san jude
+          h3.post-container__name Ribeye Alquip Culpa
+          p.post-container__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, autem quo, placeat eligendi minima, quasi molestias consectetur error 
+          a(href='#').btn-cta.post-button Read More
+      .ed-item.l-1-3
+        .post-container__block
+          img(src='img/post.jpg').post-container__img
+          p.post-container__institution san jude
+          h3.post-container__name Ribeye Alquip Culpa
+          p.post-container__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, autem quo, placeat eligendi minima, quasi molestias consectetur error 
+          a(href='#').btn-cta.post-button Read More
+      .ed-item.l-1-3
+        .post-container__block
+          img(src='img/post.jpg').post-container__img
+          p.post-container__institution san jude
+          h3.post-container__name Ribeye Alquip Culpa
+          p.post-container__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, autem quo, placeat eligendi minima, quasi molestias consectetur error 
+          a(href='#').btn-cta.post-button Read More
       

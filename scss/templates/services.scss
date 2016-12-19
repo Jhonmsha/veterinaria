@@ -1,11 +1,20 @@
 .services-container{
     @include grid('.services', 1 2 3, 2em);
-
+    margin-top: 1em;
 }
 .services-title, 
 .services-subtitle{
    text-align: center;
    font-family: $text-titles;
+   margin: 0;
+}
+.services-title{
+    margin-top: 2em;
+    font-size: 2em;
+    color: rgba($colorText, .5);
+    span{
+        color: $colorText;
+    }
 }
 .services{
     display: flex;

@@ -967,7 +967,8 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -1em;
-  margin-right: -1em; }
+  margin-right: -1em;
+  margin-top: 1em; }
   .services-container img {
     display: block; }
   body {
@@ -985,7 +986,15 @@ body {
 .services-title,
 .services-subtitle {
   text-align: center;
-  font-family: "Signika", sans-serif; }
+  font-family: "Signika", sans-serif;
+  margin: 0; }
+
+.services-title {
+  margin-top: 2em;
+  font-size: 2em;
+  color: rgba(85, 85, 85, 0.5); }
+  .services-title span {
+    color: #555; }
 
 .services {
   display: -webkit-flex;
@@ -1022,17 +1031,18 @@ body {
     .gallery-container > .gallery {
       width: calc(25% - 0em); } }
 
-.price-container__title, .price-container__subtitle {
-  font-family: "Signika", sans-serif;
-  text-align: center;
-  margin: 0; }
-
-.price-container__title {
-  font-size: 3em;
-  color: rgba(85, 85, 85, 0.5); }
-  .price-container__title span {
-    color: #555;
-    padding-left: .2em; }
+.price-container {
+  margin-top: 1.5em; }
+  .price-container__title, .price-container__subtitle {
+    font-family: "Signika", sans-serif;
+    text-align: center;
+    margin: 0; }
+  .price-container__title {
+    font-size: 2em;
+    color: rgba(85, 85, 85, 0.5); }
+    .price-container__title span {
+      color: #555;
+      padding-left: .2em; }
 
 .price-container-item {
   margin: 0; }
@@ -1062,12 +1072,71 @@ body {
     font-size: .6em;
     margin: 0; }
 
-.price {
-  margin-top: 3em; }
-
 .price-button {
   text-align: center;
   background: #4fa6a0;
   color: #fff; }
   .price-button:hover {
     color: #4fa6a0; }
+
+.testimonials {
+  text-align: center;
+  position: relative;
+  background: url(/img/mascotas.jpg) center/cover; }
+  .testimonials:before {
+    content: "";
+    position: absolute;
+    background: rgba(79, 166, 160, 0.7);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 0; }
+
+.testimonials-container {
+  color: #fff;
+  position: relative; }
+  .testimonials-container__title, .testimonials-container__subtitle {
+    font-family: "Signika", sans-serif; }
+  .testimonials-container__title {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2em;
+    margin-bottom: 0; }
+    .testimonials-container__title span {
+      color: #fff;
+      padding-left: .3em; }
+  .testimonials-container__subtitle {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1em; }
+  .testimonials-container__img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%; }
+
+.post-container {
+  text-align: center;
+  margin-top: 2em; }
+  .post-container__title, .post-container__subtitle {
+    font-family: "Signika", sans-serif;
+    margin: 0;
+    width: 100%; }
+  .post-container__title {
+    color: rgba(85, 85, 85, 0.5);
+    font-size: 2em; }
+    .post-container__title span {
+      color: #555;
+      padding-left: .3em; }
+  .post-container__subtitle {
+    color: #81cdc6; }
+  .post-container__block {
+    margin: 2em 0em;
+    border: 2px solid #ccc; }
+  .post-container__institution {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #4fa6a0; }
+  .post-container__name {
+    margin: 0; }
+  .post-container__description {
+    text-align: left;
+    padding: 1em; }

@@ -1,0 +1,38 @@
+.post-container{
+    text-align: center;
+    margin-top: 2em;
+    &__title, &__subtitle{
+        font-family: $text-titles;
+        margin:0;
+        width: 100%;
+    }
+    &__title{
+        color: rgba($colorText, .5);
+        font-size: 2em;
+        span{
+            color: $colorText;
+            padding-left: .3em;
+            
+;        }
+    }
+    &__subtitle{
+        color: $color1;
+    }
+    &__block{
+        margin: 2em 0em;
+        border: 2px solid #ccc;
+        //padding: 0;
+    }  
+    &__institution{
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color: $color2;
+    }
+    &__name{
+        margin: 0;
+    }
+    &__description{
+        text-align: left;
+        padding: 1em;
+  }
+}

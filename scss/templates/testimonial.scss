@@ -1,0 +1,42 @@
+.testimonials{   
+    text-align: center;
+    position: relative;
+    background:url(/img/mascotas.jpg) center/cover;
+    &:before{
+        content: "";
+        position: absolute;
+        background: rgba($color2,.7);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 0;
+    }    
+}
+.testimonials-container{
+    color: $colorMenu;
+    position: relative;
+    &__title, &__subtitle{
+        font-family: $text-titles;
+        
+    }
+    &__title{
+        color: rgba($colorMenu, .5);
+        font-size: 2em;
+        margin-bottom: 0;
+        span{
+
+            color: $colorMenu;
+            padding-left: .3em;
+        }
+    }
+    &__subtitle{
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    &__img{
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,40 @@
+.footer-container{
+    background: $colorFooter;
+    color: rgba($colorMenu,.5);
+    &__up{
+       display: flex;
+    }
+}
+.footer-container__head{
+    font-family: $text-titles;
+    height: 110px;
+    
+    &__title{
+        font-size: 1.5em;
+        margin-bottom: 0;
+        span {
+            color: $colorMenu;
+            padding-left: .3em;
+        }
+    }
+    &__subtitle{
+        margin-top: 0;
+    }
+}
+.icon-dog{
+    color: $color1;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 10px;
+}
+.footer-container__body{
+    line-height:
+    &__description{
+       margin-top: 0;
+    }
+    &__icons{
+        display: flex;
+        font-size: 1.4em;
+        justify-content: space-around;
+    }
+}

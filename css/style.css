@@ -1140,3 +1140,42 @@ body {
   .post-container__description {
     text-align: left;
     padding: 1em; }
+
+.footer-container {
+  background: #3E3E3E;
+  color: rgba(255, 255, 255, 0.5); }
+  .footer-container__up {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.footer-container__head {
+  font-family: "Signika", sans-serif;
+  height: 110px; }
+  .footer-container__head__title {
+    font-size: 1.5em;
+    margin-bottom: 0; }
+    .footer-container__head__title span {
+      color: #fff;
+      padding-left: .3em; }
+  .footer-container__head__subtitle {
+    margin-top: 0; }
+
+.icon-dog {
+  color: #81cdc6;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 10px; }
+
+.footer-container__body {
+  line-height: auto; }
+  .footer-container__body__description {
+    margin-top: 0; }
+  .footer-container__body__icons {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.4em;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
